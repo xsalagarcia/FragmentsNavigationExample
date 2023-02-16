@@ -38,6 +38,12 @@ class Fragment2 : Fragment(R.layout.fragment2)  {
 
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.passedValue.setText(Fragment2Args.fromBundle(requireArguments()).valueToSend)
+    }
+
 
 }
 

@@ -25,6 +25,10 @@
             android:id="@+id/action_fragment2_to_fragment1"
 
             app:destination="@id/fragment1" />
+        <argument
+            android:name="valueToSend"
+            app:argType="string"
+            android:defaultValue="Default value" />
     </fragment>
     <fragment
         android:id="@+id/fragment3"

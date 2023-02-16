@@ -31,8 +31,14 @@ class Fragment1 : Fragment(R.layout.fragment1) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.goToFragment2Btn.setOnClickListener { view -> view.findNavController()
-            .navigate(R.id.fragment2)}
+        /*binding.goToFragment2Btn.setOnClickListener { view -> view.findNavController()
+            .navigate(R.id.fragment2)}*/
+        binding.goToFragment2Btn.setOnClickListener{view -> view.findNavController()
+            .navigate(
+                Fragment1Directions
+                    .actionFragment1ToFragment2()
+                    .setValueToSend(binding.value.text.toString()),
+            )}
 
         binding.goToFragment3Btn.setOnClickListener { _ -> findNavController()
             .navigate(R.id.fragment3)}
